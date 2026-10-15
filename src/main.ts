@@ -120,7 +120,7 @@ async function boot() {
     if (override) { ui.speak(override.speakerId, session.interpolate(override.text)); return true; }
     const gate = gateInteraction(interaction, session.state);
     if (gate === 'ready') return false;
-    const message = gate === 'locked' ? interaction.lockedText ?? 'Visit the earlier stop first.'
+    const message = gate === 'locked' ? interaction.lockedText ?? 'there were other things to do first!'
       : gate === 'wrong-travel' ? interaction.wrongTravelText ?? (interaction.requiredTravel === 'vehicle' ? 'Let’s take the car here.' : 'Step out of the car here first.')
       : interaction.wrongLeaderText ?? 'Let the other person lead here. Press Q to switch.';
     ui.speak((gate === 'locked' ? interaction.lockedSpeakerId : gate === 'wrong-travel' ? interaction.wrongTravelSpeakerId : undefined) ?? interaction.wrongLeaderSpeakerId ?? interaction.speakerId ?? session.state.leaderId, session.interpolate(message));
