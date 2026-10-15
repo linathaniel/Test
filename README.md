@@ -1,5 +1,7 @@
 # Our dreamy GN world
 
+**Play the game:** [https://linathaniel.github.io/Test/](https://linathaniel.github.io/Test/)
+
 Milestone 3 integrates the full story from [GAME_DESIGN.md](GAME_DESIGN.md), personalized animated characters, illustrated environments, real photographs and the owner's final anniversary message. Asset provenance and review notes are in [docs/ART_ASSETS.md](docs/ART_ASSETS.md).
 
 The complete journey has nine worlds:
@@ -124,9 +126,9 @@ Photographs are lazy-loaded by the selected moment and view. No Gemini-prepared 
 
 ## GitHub Pages
 
-The repository is [Nonyo/Test](https://github.com/Nonyo/Test). Local development uses `/annivgame/`; the manual **Publish game to GitHub Pages** workflow in `.github/workflows/pages.yml` derives `/Test/` for this repository.
+The repository is [linathaniel/Test](https://github.com/linathaniel/Test). Local development uses `/annivgame/`; the manual **Publish game to GitHub Pages** workflow in `.github/workflows/pages.yml` derives `/Test/` for this repository.
 
-After the source is uploaded, choose **Settings → Pages → Source: GitHub Actions**, then run **Publish game to GitHub Pages** from the Actions tab. The workflow installs lockfile dependencies, runs the unit checks, validates content, builds the game with the repository's base path, and publishes `dist/`. The expected site address after a successful deployment is **https://nonyo.github.io/Test/**. Uploading source alone does not start the manual deployment workflow.
+To publish, choose **Settings → Pages → Source: GitHub Actions**, then run **Publish game to GitHub Pages** from the Actions tab. The workflow installs lockfile dependencies, runs the unit checks, validates content, builds the game with the repository's base path, and publishes `dist/`. The game address is [https://linathaniel.github.io/Test/](https://linathaniel.github.io/Test/). Pushing source alone does not start the manual deployment workflow.
 
 For another local base in PowerShell:
 
@@ -135,7 +137,7 @@ $env:GAME_BASE_PATH = '/another-repository/'
 npm run build
 ```
 
-All public/ content and public Git history are shareable. Raw references and editable art stay ignored; public/ contains the optimized web copies. Publishing, public-sharing review and actual MacBook testing belong to Milestone 4. No files have been pushed or deployed.
+All public/ content and public Git history are shareable. Raw references and editable art stay ignored; public/ contains the optimized web copies. Publishing, public-sharing review and actual MacBook testing belong to Milestone 4.
 
 ## Pinned toolchain
 
