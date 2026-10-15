@@ -7,21 +7,21 @@
   "spawn": {
     "leader": {
       "x": 265,
-      "y": 410
+      "y": 375
     },
     "companion": {
       "x": 225,
-      "y": 410
+      "y": 375
     }
   },
   "obstacles": [
-    { "x": 0, "y": 0, "width": 95, "height": 540 },
-    { "x": 905, "y": 0, "width": 55, "height": 540 },
-    { "x": 95, "y": 0, "width": 810, "height": 140 },
-    { "x": 95, "y": 430, "width": 705, "height": 110 },
-    { "x": 800, "y": 465, "width": 105, "height": 75 },
-    { "x": 205, "y": 185, "width": 235, "height": 190 },
-    { "x": 520, "y": 185, "width": 230, "height": 190 }
+    { "x": 0, "y": 0, "width": 110, "height": 540 },
+    { "x": 885, "y": 0, "width": 75, "height": 540 },
+    { "x": 110, "y": 0, "width": 775, "height": 140 },
+    { "x": 110, "y": 395, "width": 685, "height": 145 },
+    { "x": 795, "y": 440, "width": 90, "height": 100 },
+    { "x": 180, "y": 180, "width": 265, "height": 170 },
+    { "x": 510, "y": 180, "width": 270, "height": 170 }
   ],
   "interactions": [
     {
@@ -30,12 +30,12 @@
       "kind": "memory",
       "visual": "table",
       "position": {
-        "x": 120,
-        "y": 360
+        "x": 140,
+        "y": 345
       },
       "approach": {
-        "x": 155,
-        "y": 395
+        "x": 145,
+        "y": 370
       },
       "radius": 80,
       "requires": [],
@@ -59,11 +59,11 @@
       "visual": "table",
       "position": {
         "x": 835,
-        "y": 310
+        "y": 285
       },
       "approach": {
-        "x": 800,
-        "y": 350
+        "x": 815,
+        "y": 315
       },
       "radius": 80,
       "requires": [],
@@ -87,11 +87,11 @@
       "visual": "castle",
       "position": {
         "x": 480,
-        "y": 160
+        "y": 155
       },
       "approach": {
         "x": 480,
-        "y": 195
+        "y": 180
       },
       "radius": 72,
       "requires": [],
@@ -116,11 +116,11 @@
       "visual": "proposal",
       "position": {
         "x": 835,
-        "y": 445
+        "y": 420
       },
       "approach": {
-        "x": 785,
-        "y": 420
+        "x": 815,
+        "y": 395
       },
       "radius": 80,
       "requires": [

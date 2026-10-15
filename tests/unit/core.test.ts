@@ -55,7 +55,7 @@ describe('story contracts', () => {
   });
   it('rejects a blocked interaction ray even when the approach can be reached', () => {
     const broken = structuredClone(story);
-    broken.scenes.find((scene) => scene.id === 'madeira')!.obstacles.push({ x: 470, y: 175, width: 20, height: 5 });
+    broken.scenes.find((scene) => scene.id === 'madeira')!.obstacles.push({ x: 470, y: 160, width: 20, height: 5 });
     expect(() => validateStory(broken)).toThrow('blocked approach line');
   });
 });

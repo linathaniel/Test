@@ -8,7 +8,7 @@ const railway = scenes.find((scene) => scene.id === 'korea-railway')!.interactio
 const garage = scenes.find((scene) => scene.id === 'austin-francine')!.interactions.find((interaction) => interaction.kind === 'vehicle-exit')!;
 const madeira = scenes.find((scene) => scene.id === 'madeira')!;
 const finale = madeira.interactions.find((interaction) => interaction.kind === 'ending')!;
-const madeiraPath = { left: 155, center: 480, right: 800, top: 170, bottom: 410 };
+const madeiraPath = { left: 145, center: 480, right: 815, top: 165, bottom: 375 };
 type Debug = {
   mode: string; sceneId: string; leaderId: string; target: string | null; flags: string[]; completed: string[];
   leader: { x: number; y: number }; follower: { x: number; y: number };
@@ -80,8 +80,8 @@ async function remainingMemories(page: Page, sceneId: string) {
 function madeiraRoute(start: Point, destination: Point): Point[] {
   const { left, center, right, top, bottom } = madeiraPath;
   // Enter/leave the statue's wider forecourt vertically before returning to the lower loop.
-  const entry = start.y > 430 ? { x: start.x, y: bottom } : start;
-  const exit = destination.y > 430 ? { x: destination.x, y: bottom } : destination;
+  const entry = start.y > 395 ? { x: start.x, y: bottom } : start;
+  const exit = destination.y > 395 ? { x: destination.x, y: bottom } : destination;
   const corners = [{ x: left, y: top }, { x: center, y: top }, { x: right, y: top },
     { x: left, y: bottom }, { x: center, y: bottom }, { x: right, y: bottom }];
   const lanes = [[0, 1], [1, 2], [0, 3], [1, 4], [2, 5], [3, 4], [4, 5]];
@@ -1017,19 +1017,19 @@ test('Madeira paths block sea and inland shortcuts while all three photo stops w
   };
   // The bottom garden bed prevents a direct shortcut toward the castle.
   const inland = await push('w');
-  expect(inland.y).toBeGreaterThanOrEqual(383);
-  expect(inland.y).toBeLessThan(400);
+  expect(inland.y).toBeGreaterThanOrEqual(358);
+  expect(inland.y).toBeLessThan(375);
   await moveTo(page, madeiraPath.left, madeiraPath.bottom);
-  expect((await push('a')).x).toBeGreaterThan(103);
+  expect((await push('a')).x).toBeGreaterThan(118);
   await moveTo(page, madeiraPath.center, madeiraPath.bottom);
-  expect((await push('s')).y).toBeLessThan(433);
+  expect((await push('s')).y).toBeLessThan(398);
   await moveTo(page, madeiraPath.right, madeiraPath.bottom);
-  expect((await push('d')).x).toBeLessThan(896);
+  expect((await push('d')).x).toBeLessThan(876);
   await moveTo(page, madeiraPath.center, madeiraPath.top);
   expect((await push('w')).y).toBeGreaterThan(148);
-  await moveTo(page, 835, 445);
-  expect((await state(page)).leader.y).toBeGreaterThan(438);
-  expect((await push('s')).y).toBeLessThan(468);
+  await moveTo(page, 835, 420);
+  expect((await state(page)).leader.y).toBeGreaterThan(413);
+  expect((await push('s')).y).toBeLessThan(443);
   // Walk the left loop, then switch on it; the follower must stay on the same path.
   await moveTo(page, madeiraPath.left, madeiraPath.top); await moveTo(page, madeiraPath.left, madeiraPath.bottom); await checkFeet();
   const originalLeader = (await state(page)).leaderId;
