@@ -1,0 +1,96 @@
+{
+  "id": "norway-scrapbook",
+  "title": "A Norway scrapbook",
+  "eyebrow": "AUSTIN",
+  "description": "Explore the marked moments. E interacts, and Q lets the other person lead.",
+  "theme": "norway",
+  "spawn": {
+    "leader": {
+      "x": 190,
+      "y": 430
+    },
+    "companion": {
+      "x": 150,
+      "y": 430
+    }
+  },
+  "obstacles": [],
+  "interactions": [
+    {
+      "id": "norway-book",
+      "label": "The Norway scrapbook",
+      "kind": "scrapbook",
+      "visual": "scrapbook",
+      "position": {
+        "x": 480,
+        "y": 330
+      },
+      "approach": {
+        "x": 480,
+        "y": 372
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "norway-read",
+      "title": "The Norway scrapbook",
+      "text": "A and D turn pages; E closes the scrapbook.",
+      "pages": [
+        {
+          "id": "norway-aurora",
+          "scene": "norway",
+          "label": "Northern Lights?",
+          "caption": "Such a long drive for what... we'll get to see this again but better.",
+          "alt": "Together beneath the northern lights.",
+          "originalAsset": "assets/memories/real-norway-2-original.webp",
+          "themedAsset": "assets/memories/real-norway-2-themed.webp"
+        },
+        {
+          "id": "norway-library",
+          "scene": "norway",
+          "label": "A beauty in the library",
+          "caption": "Still one of my most favorite moments and you looked other-worldly here. What more does a guy need?",
+          "alt": "A quiet moment in Norway.",
+          "originalAsset": "assets/memories/real-norway-5-original.webp",
+          "themedAsset": "assets/memories/real-norway-5-themed.webp"
+        },
+        {
+          "id": "norway-snacks",
+          "scene": "norway",
+          "label": "VAFFEL!",
+          "caption": "VAFFEL!",
+          "alt": "Snacks and a cafe stop in Norway.",
+          "originalAsset": "assets/memories/real-norway-3-original.webp",
+          "themedAsset": "assets/memories/real-norway-3-themed.webp"
+        },
+        {
+          "id": "norway-winter",
+          "scene": "norway",
+          "label": "Professional Cutie",
+          "caption": "You looks so good I love your fashion sense and cuteness yay :)",
+          "alt": "Bundled up for the Norway winter.",
+          "originalAsset": "assets/memories/real-norway-1-original.webp",
+          "themedAsset": "assets/memories/real-norway-1-themed.webp"
+        },
+        {
+          "id": "norway-cozy-snacks",
+          "scene": "norway",
+          "label": "My baby",
+          "caption": "HA! Don't think I wasn't gonna pull this one out hehehehehehee I love you so much.",
+          "alt": "A cozy moment with snacks in Norway.",
+          "originalAsset": "assets/memories/real-norway-4-original.webp",
+          "themedAsset": "assets/memories/real-norway-4-themed.webp"
+        }
+      ]
+    }
+  ],
+  "completionFlags": [
+    "norway-read"
+  ],
+  "nextSceneId": "austin-francine",
+  "checkpoint": {
+    "title": "A Norway scrapbook, remembered",
+    "text": "After our cold plunge, bingo, shanghai tacos, and hectic flights, we had to come back home",
+    "button": "Continue our journey"
+  },
+  "backgroundAsset": "assets/world/norway-scrapbook.webp"
+}

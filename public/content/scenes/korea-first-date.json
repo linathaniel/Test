@@ -1,0 +1,271 @@
+{
+  "id": "korea-first-date",
+  "title": "Our first date",
+  "eyebrow": "KOREA",
+  "description": "Flowers, a search for dinner, dessert.",
+  "theme": "korea",
+  "spawn": {
+    "leader": {
+      "x": 400,
+      "y": 289
+    },
+    "companion": {
+      "x": 360,
+      "y": 289
+    }
+  },
+  "obstacles": [],
+  "interactions": [
+    {
+      "id": "flower-shop",
+      "label": "The flower window",
+      "kind": "choice",
+      "visual": "flowers",
+      "position": {
+        "x": 227,
+        "y": 239
+      },
+      "approach": {
+        "x": 227,
+        "y": 281
+      },
+      "radius": 66,
+      "requiredLeaderId": "person-a",
+      "wrongLeaderText": "shouldn't you know which flowers I like?",
+      "wrongLeaderSpeakerId": "person-b",
+      "speakerId": "person-b",
+      "requires": [],
+      "setsFlag": "flowers-bought",
+      "title": "Something for you",
+      "text": "Three bouquets. One very important opinion.",
+      "options": [
+        {
+          "id": "ugly",
+          "label": "The questionable bouquet",
+          "description": "A brave mix of colors.",
+          "response": "those are ugly",
+          "accepted": false,
+          "color": "#b29364",
+          "position": {
+            "x": 143,
+            "y": 239
+          },
+          "approach": {
+            "x": 143,
+            "y": 281
+          }
+        },
+        {
+          "id": "roses",
+          "label": "Blue & white roses",
+          "description": "A dreamy extra effort.",
+          "response": "A for effort",
+          "accepted": true,
+          "color": "#88a8bd",
+          "position": {
+            "x": 227,
+            "y": 239
+          },
+          "approach": {
+            "x": 227,
+            "y": 281
+          }
+        },
+        {
+          "id": "tulips",
+          "label": "Natural blue tulips",
+          "description": "The ones she wishes you'd chosen.",
+          "response": "I wish you chose these",
+          "accepted": false,
+          "color": "#759fac",
+          "position": {
+            "x": 311,
+            "y": 239
+          },
+          "approach": {
+            "x": 311,
+            "y": 281
+          }
+        }
+      ],
+      "memory": {
+        "id": "first-date-flowers",
+        "scene": "katsu",
+        "label": "Our first date flowers",
+        "caption": "You already know the story of how I tried to go to so many stores, multiple subway stops for their flower stores, almost got lost, called both Stephanie and Anya, started out with picking fake ones, but still ended up picking dyed ones.",
+        "alt": "Flowers for our first date.",
+        "originalAsset": "assets/memories/real-flowers-original.webp",
+        "themedAsset": "assets/memories/real-flowers-themed.webp"
+      }
+    },
+    {
+      "id": "closed-restaurant",
+      "label": "The shuttered restaurant",
+      "kind": "dialogue",
+      "visual": "closed",
+      "position": {
+        "x": 675,
+        "y": 242
+      },
+      "approach": {
+        "x": 675,
+        "y": 282
+      },
+      "radius": 80,
+      "requires": [
+        "flowers-bought"
+      ],
+      "lockedText": "let's pick the flowers first.",
+      "speakerId": "person-a",
+      "setsFlag": "closed-visited",
+      "title": "Closed",
+      "text": "it's closed… let's keep looking.",
+      "requiredLeaderId": "person-a",
+      "wrongLeaderText": "shouldn't you be leading us on our first date?",
+      "wrongLeaderSpeakerId": "person-b",
+      "prerequisiteOverrides": [
+        {
+          "missingFlag": "flowers-bought",
+          "text": "OOPS I forgot to get her nice flowers",
+          "speakerId": "person-a"
+        }
+      ]
+    },
+    {
+      "id": "delivery-restaurant",
+      "label": "The takeaway counter",
+      "kind": "dialogue",
+      "visual": "delivery",
+      "position": {
+        "x": 190,
+        "y": 428
+      },
+      "approach": {
+        "x": 190,
+        "y": 465
+      },
+      "radius": 80,
+      "requires": [
+        "closed-visited"
+      ],
+      "lockedText": "let's try that top right restaurant first.",
+      "speakerId": "person-b",
+      "setsFlag": "delivery-visited",
+      "title": "Delivery only",
+      "text": "this place is delivery only!",
+      "requiredLeaderId": "person-a",
+      "wrongLeaderText": "shouldn't you be leading us on our first date?",
+      "wrongLeaderSpeakerId": "person-b",
+      "prerequisiteOverrides": [
+        {
+          "missingFlag": "flowers-bought",
+          "text": "OOPS I forgot to get baby nice flowers",
+          "speakerId": "person-a"
+        }
+      ]
+    },
+    {
+      "id": "katsu",
+      "label": "The katsu restaurant",
+      "kind": "memory",
+      "visual": "restaurant",
+      "position": {
+        "x": 766,
+        "y": 404
+      },
+      "approach": {
+        "x": 766,
+        "y": 447
+      },
+      "radius": 80,
+      "requiredLeaderId": "person-b",
+      "wrongLeaderText": "let me find a place.",
+      "wrongLeaderSpeakerId": "person-b",
+      "speakerId": "person-b",
+      "requires": [
+        "delivery-visited"
+      ],
+      "lockedText": "let's try the other restaurants first.",
+      "setsFlag": "katsu-shared",
+      "title": "Dinner date!",
+      "text": "you're lucky I like you",
+      "memory": {
+        "id": "katsu",
+        "scene": "katsu",
+        "label": "Dinner date!",
+        "caption": "Yellow brick road, one of your favorite foods, and the start of our adventures :)",
+        "alt": "Flowers, katsu, and the beginning of us.",
+        "originalAsset": "assets/memories/real-date-1-original.webp",
+        "themedAsset": "assets/memories/real-date-1-themed.webp",
+        "additionalPhotos": [
+          {
+            "label": "Dinner date!",
+            "caption": "Look at me lovingly looking at my phone while I have you accross from me on our first date",
+            "alt": "Together at the table on our first date.",
+            "originalAsset": "assets/memories/real-date-2-original.webp",
+            "themedAsset": "assets/memories/real-date-2-themed.webp"
+          }
+        ]
+      },
+      "prerequisiteOverrides": [
+        {
+          "missingFlag": "flowers-bought",
+          "text": "OOPS I forgot to get her nice flowers",
+          "speakerId": "person-a"
+        }
+      ]
+    },
+    {
+      "id": "ice-cream",
+      "label": "The ice cream window",
+      "kind": "memory",
+      "visual": "ice-cream",
+      "position": {
+        "x": 478,
+        "y": 424
+      },
+      "approach": {
+        "x": 478,
+        "y": 467
+      },
+      "radius": 80,
+      "requires": [
+        "katsu-shared"
+      ],
+      "lockedText": "let's feed our princess before dessert.",
+      "setsFlag": "ice-cream-shared",
+      "title": "Baskin Robbins after our first date",
+      "text": "One last stop for ice cream.",
+      "memory": {
+        "id": "first-date-ice-cream",
+        "scene": "ice-cream",
+        "label": "Baskin Robbins after our first date",
+        "caption": "Hopefully wrapping this up better than how it started haha",
+        "alt": "Ice cream after katsu.",
+        "originalAsset": "assets/memories/real-ice-cream-original.webp",
+        "themedAsset": "assets/memories/real-ice-cream-themed.webp"
+      },
+      "prerequisiteOverrides": [
+        {
+          "missingFlag": "flowers-bought",
+          "text": "OOPS I forgot to get her nice flowers",
+          "speakerId": "person-a"
+        }
+      ]
+    }
+  ],
+  "completionFlags": [
+    "flowers-bought",
+    "closed-visited",
+    "delivery-visited",
+    "katsu-shared",
+    "ice-cream-shared"
+  ],
+  "nextSceneId": "korea-railway",
+  "checkpoint": {
+    "title": "A first date to remember",
+    "text": "Flowers, katsu, and ice cream. I think it's autumn time...",
+    "button": "Continue our journey"
+  },
+  "backgroundAsset": "assets/world/korea-first-date.webp"
+}

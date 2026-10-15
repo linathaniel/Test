@@ -1,0 +1,49 @@
+{
+  "id": "introduction",
+  "title": "Our dreamy GN world",
+  "eyebrow": "THE BEGINNING",
+  "description": "Use WASD to walk to the dreamy letter in the bottom right.",
+  "theme": "garden",
+  "spawn": {
+    "leader": {
+      "x": 190,
+      "y": 190
+    },
+    "companion": {
+      "x": 150,
+      "y": 190
+    }
+  },
+  "obstacles": [],
+  "interactions": [
+    {
+      "id": "welcome-card",
+      "label": "The dreamy letter",
+      "kind": "naming",
+      "visual": "envelope",
+      "position": {
+        "x": 805,
+        "y": 429
+      },
+      "approach": {
+        "x": 789,
+        "y": 461
+      },
+      "radius": 82,
+      "requires": [],
+      "setsFlag": "welcome-read",
+      "title": "What should we call each other?",
+      "text": "{greeting}"
+    }
+  ],
+  "completionFlags": [
+    "welcome-read"
+  ],
+  "nextSceneId": "korea-first-date",
+  "checkpoint": {
+    "title": "Our adventure begins",
+    "text": "{greeting}",
+    "button": "Let's go to Korea"
+  },
+  "backgroundAsset": "assets/world/introduction.webp"
+}

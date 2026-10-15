@@ -1,0 +1,185 @@
+{
+  "id": "korea-petite-france",
+  "title": "Petite France",
+  "eyebrow": "KOREA",
+  "description": "Explore the marked moments. E interacts, and Q lets the other person lead.",
+  "theme": "france",
+  "spawn": {
+    "leader": {
+      "x": 190,
+      "y": 430
+    },
+    "companion": {
+      "x": 150,
+      "y": 430
+    }
+  },
+  "obstacles": [],
+  "interactions": [
+    {
+      "id": "france-village",
+      "label": "The colorful village",
+      "kind": "memory",
+      "visual": "postcard",
+      "position": {
+        "x": 225,
+        "y": 230
+      },
+      "approach": {
+        "x": 225,
+        "y": 272
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "france-village-seen",
+      "title": "Little Paris",
+      "text": "A walk around the colorful village.",
+      "memory": {
+        "id": "petite-france-village",
+        "scene": "france",
+        "label": "Little Paris",
+        "caption": "Oh man what a time this was... I would so be down to revisit this :)",
+        "alt": "Exploring the colorful village together.",
+        "originalAsset": "assets/memories/real-paris-2-original.webp",
+        "themedAsset": "assets/memories/real-paris-2-themed.webp"
+      }
+    },
+    {
+      "id": "france-around",
+      "label": "Around Petite France",
+      "kind": "memory",
+      "visual": "france-tower",
+      "position": {
+        "x": 455,
+        "y": 220
+      },
+      "approach": {
+        "x": 455,
+        "y": 262
+      },
+      "radius": 72,
+      "requires": [],
+      "setsFlag": "france-around-seen",
+      "title": "Eiffel Teepee",
+      "text": "Another picture from Petite France.",
+      "memory": {
+        "id": "france-around-memory",
+        "scene": "france",
+        "label": "Eiffel Teepee",
+        "caption": "I never would have imagined that we would see the actual thing 6 months later with you, we have genuinely seen so much together and I'm so grateful and happy with our journey",
+        "alt": "Another picture from Petite France.",
+        "originalAsset": "assets/memories/real-paris-4-original.webp",
+        "themedAsset": "assets/memories/real-paris-4-themed.webp"
+      }
+    },
+    {
+      "id": "france-garden",
+      "label": "Inside Petite France",
+      "kind": "memory",
+      "visual": "france-room",
+      "position": {
+        "x": 715,
+        "y": 265
+      },
+      "approach": {
+        "x": 715,
+        "y": 307
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "france-garden-seen",
+      "title": "Petite picture spot",
+      "text": "Another dreamy stop inside Petite France.",
+      "memory": {
+        "id": "petite-france-garden",
+        "scene": "france",
+        "label": "Petite picture spot",
+        "caption": "Honestly have no clue what we were doing here LOL but we have such good times when we're together :)",
+        "alt": "A dreamy moment inside Petite France.",
+        "originalAsset": "assets/memories/real-paris-1-original.webp",
+        "themedAsset": "assets/memories/real-paris-1-themed.webp"
+      }
+    },
+    {
+      "id": "france-together",
+      "label": "A picture together",
+      "kind": "memory",
+      "visual": "france-statue",
+      "position": {
+        "x": 720,
+        "y": 415
+      },
+      "approach": {
+        "x": 720,
+        "y": 455
+      },
+      "radius": 72,
+      "requires": [],
+      "setsFlag": "france-together-seen",
+      "requiredLeaderId": "person-a",
+      "wrongLeaderText": "I got an idea for a pic...",
+      "wrongLeaderSpeakerId": "person-a",
+      "title": "A picture together",
+      "text": "Together at Petite France.",
+      "memory": {
+        "id": "france-together-memory",
+        "scene": "france",
+        "label": "A goofy pic",
+        "caption": "Looking back I can't believe I asked for this pic and you were down. I can see it happening now but that was so early in our relationship. Thanks baby for putting up with my stupidity I love you <3",
+        "alt": "Together at Petite France.",
+        "originalAsset": "assets/memories/real-paris-3-original.webp",
+        "themedAsset": "assets/memories/real-paris-3-themed.webp"
+      }
+    },
+    {
+      "id": "france-goodbye",
+      "label": "One more look around",
+      "kind": "memory",
+      "visual": "viewpoint",
+      "position": {
+        "x": 480,
+        "y": 410
+      },
+      "approach": {
+        "x": 480,
+        "y": 452
+      },
+      "radius": 80,
+      "requires": [
+        "france-village-seen",
+        "france-around-seen",
+        "france-garden-seen",
+        "france-together-seen"
+      ],
+      "setsFlag": "france-goodbye",
+      "title": "One more look around",
+      "text": "I've always wanted to go to France...",
+      "speakerId": "person-b",
+      "memory": {
+        "id": "petite-france-farewell",
+        "scene": "france",
+        "label": "City of Love",
+        "caption": "Visiting you in Paris was such a defining moment in our relationship. It was really a sign of how strong our feelings were and our commitment was. I'm so glad we experienced that chapter of our lives.",
+        "alt": "One last picture before leaving Petite France.",
+        "originalAsset": "assets/memories/real-paris-end-original.webp",
+        "themedAsset": "assets/memories/real-paris-end-themed.webp"
+      },
+      "lockedText": "I wanna stay and look at things",
+      "lockedSpeakerId": "person-b"
+    }
+  ],
+  "completionFlags": [
+    "france-village-seen",
+    "france-around-seen",
+    "france-garden-seen",
+    "france-together-seen",
+    "france-goodbye"
+  ],
+  "nextSceneId": "austin-museum",
+  "checkpoint": {
+    "title": "Petite France, remembered",
+    "text": "Little Paris done, what's our next stop?",
+    "button": "Continue our journey"
+  },
+  "backgroundAsset": "assets/world/korea-petite-france.webp"
+}

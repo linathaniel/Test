@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "title": "Our dreamy GN world",
+  "subtitle": "Every adventure starts with us.",
+  "greeting": "Three years of adventure and hardship. Three years of love and laughter. Three years of you and me.",
+  "characters": [
+    {
+      "id": "person-a",
+      "name": "Nathaniel",
+      "color": "#c77960",
+      "hair": "#51392e"
+    },
+    {
+      "id": "person-b",
+      "name": "Gracie",
+      "color": "#7f9b80",
+      "hair": "#543b32"
+    }
+  ],
+  "sceneFiles": [
+    "content/scenes/introduction.json",
+    "content/scenes/korea-first-date.json",
+    "content/scenes/korea-railway.json",
+    "content/scenes/korea-smurf.json",
+    "content/scenes/korea-petite-france.json",
+    "content/scenes/austin-museum.json",
+    "content/scenes/norway-scrapbook.json",
+    "content/scenes/austin-francine.json",
+    "content/scenes/madeira.json"
+  ]
+}

@@ -1,0 +1,672 @@
+{
+  "tool": "Built-in ImageGen",
+  "metadata": "EXIF/XMP removed; source originals unchanged",
+  "photoBooth": "real-austin-1-original.webp intentionally original only; themed generation unavailable",
+  "assets": [
+    {
+      "path": "assets/characters/gracie-walk.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 521540,
+      "kind": "character",
+      "provenance": "Built-in ImageGen; optimized for this game",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "directions": [
+        "south",
+        "north",
+        "west",
+        "east"
+      ]
+    },
+    {
+      "path": "assets/characters/nathaniel-walk.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 491580,
+      "kind": "character",
+      "provenance": "Built-in ImageGen; optimized for this game",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "directions": [
+        "south",
+        "north",
+        "west",
+        "east"
+      ]
+    },
+    {
+      "path": "assets/memories/portugal-before-proposal-original.webp",
+      "width": 900,
+      "height": 1600,
+      "bytes": 343572,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/portugal-before-proposal-themed.webp",
+      "width": 900,
+      "height": 1600,
+      "bytes": 297128,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/portugal-meal-1-original.webp",
+      "width": 1600,
+      "height": 1540,
+      "bytes": 190600,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/portugal-meal-1-themed.webp",
+      "width": 1278,
+      "height": 1230,
+      "bytes": 215414,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/portugal-meal-2-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 216850,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/portugal-meal-2-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 284580,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/portugal-proposal-original.webp",
+      "width": 1067,
+      "height": 1600,
+      "bytes": 224808,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/portugal-proposal-themed.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 268358,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/portugal-view-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 279662,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/portugal-view-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 346412,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-austin-1-original.webp",
+      "width": 606,
+      "height": 1600,
+      "bytes": 47568,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-austin-2-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 123000,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-austin-2-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 251584,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-austin-3-original.webp",
+      "width": 1195,
+      "height": 1600,
+      "bytes": 172174,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-austin-3-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 164308,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-austin-4-original.webp",
+      "width": 644,
+      "height": 878,
+      "bytes": 40808,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-austin-4-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 208768,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-citizenship-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 171960,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-citizenship-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 235414,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-date-1-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 316464,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-date-1-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 367996,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-date-2-original.webp",
+      "width": 1199,
+      "height": 1600,
+      "bytes": 210214,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-date-2-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 305346,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-flowers-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 175576,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-flowers-themed.webp",
+      "width": 1087,
+      "height": 1447,
+      "bytes": 284256,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-francine-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 314574,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-francine-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 305960,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-goodwin-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 148586,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-goodwin-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 183040,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-ice-cream-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 243644,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-ice-cream-themed.webp",
+      "width": 1087,
+      "height": 1447,
+      "bytes": 303780,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-museum-1-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 155768,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-museum-1-themed.webp",
+      "width": 1087,
+      "height": 1447,
+      "bytes": 170034,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-museum-2-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 213392,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-museum-2-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 193328,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-museum-3-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 98616,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-museum-3-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 174252,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-norway-1-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 124210,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-norway-1-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 180754,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-norway-2-original.webp",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 45080,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-norway-2-themed.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 270416,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-norway-3-original.webp",
+      "width": 655,
+      "height": 1600,
+      "bytes": 47466,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-norway-3-themed.webp",
+      "width": 1417,
+      "height": 1110,
+      "bytes": 232190,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-norway-4-original.webp",
+      "width": 655,
+      "height": 1600,
+      "bytes": 68232,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-norway-4-themed.webp",
+      "width": 960,
+      "height": 1440,
+      "bytes": 184492,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-norway-5-original.webp",
+      "width": 655,
+      "height": 1600,
+      "bytes": 36324,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-norway-5-themed.webp",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 197398,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-paris-1-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 138322,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-paris-1-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 303570,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-paris-2-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 190554,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-paris-2-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 257786,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-paris-3-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 445786,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-paris-3-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 402620,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-paris-4-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 270018,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-paris-4-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 335532,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-paris-end-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 203458,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-paris-end-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 347812,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-rail-1-original.webp",
+      "width": 1069,
+      "height": 1600,
+      "bytes": 88810,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-rail-1-themed.webp",
+      "width": 1025,
+      "height": 1534,
+      "bytes": 245864,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-rail-2-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 153744,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-rail-2-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 283694,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-rail-3-original.webp",
+      "width": 1199,
+      "height": 1600,
+      "bytes": 231668,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-rail-3-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 283686,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-rail-4-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 116182,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-rail-4-themed.webp",
+      "width": 1086,
+      "height": 1449,
+      "bytes": 219344,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-smurf-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 215526,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-smurf-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 322872,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/memories/real-snuromi-original.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 191896,
+      "kind": "original",
+      "provenance": "Owner-supplied photograph; resized without cropping"
+    },
+    {
+      "path": "assets/memories/real-snuromi-themed.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 240858,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/vehicles/railcar.webp",
+      "width": 512,
+      "height": 383,
+      "bytes": 62096,
+      "kind": "illustration",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/world/austin-francine.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 235284,
+      "kind": "environment",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/world/austin-museum.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 62882,
+      "kind": "environment",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/world/introduction.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 336186,
+      "kind": "environment",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/world/korea-first-date.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 181628,
+      "kind": "environment",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/world/korea-petite-france.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 234894,
+      "kind": "environment",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/world/korea-railway.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 188428,
+      "kind": "environment",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/world/korea-smurf.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 117086,
+      "kind": "environment",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/world/madeira.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 394114,
+      "kind": "environment",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    },
+    {
+      "path": "assets/world/norway-scrapbook.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 115610,
+      "kind": "environment",
+      "provenance": "Built-in ImageGen; optimized for this game"
+    }
+  ],
+  "totalBytes": 18065286
+}

@@ -1,0 +1,135 @@
+{
+  "id": "korea-railway",
+  "title": "Fall foliage railway park",
+  "eyebrow": "KOREA",
+  "description": "Explore the marked moments. E interacts, and Q lets the other person lead.",
+  "theme": "railway",
+  "spawn": {
+    "leader": {
+      "x": 195,
+      "y": 390
+    },
+    "companion": {
+      "x": 155,
+      "y": 390
+    }
+  },
+  "obstacles": [],
+  "interactions": [
+    {
+      "id": "railway-car",
+      "label": "The red railway car",
+      "kind": "railway",
+      "visual": "railway",
+      "position": {
+        "x": 155,
+        "y": 345
+      },
+      "approach": {
+        "x": 155,
+        "y": 387
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "railway-finished",
+      "title": "The red railway car",
+      "text": "Each press of E pedals the car forward. Four pedals to reach each scenic stop.",
+      "pedalsPerSegment": 4,
+      "requiredLeaderId": "person-a",
+      "wrongLeaderText": "I'm tired :(",
+      "wrongLeaderSpeakerId": "person-b",
+      "speakerId": "person-a",
+      "stops": [
+        {
+          "position": {
+            "x": 385,
+            "y": 345
+          },
+          "memory": {
+            "id": "railway-park",
+            "scene": "railway",
+            "label": "We're on our way!",
+            "caption": "I think I remember asking to do this photoshoot here with you hahaha I love you",
+            "alt": "A dreamy time together at the railway park.",
+            "originalAsset": "assets/memories/real-rail-1-original.webp",
+            "themedAsset": "assets/memories/real-rail-1-themed.webp"
+          },
+          "signPosition": {
+            "x": 385,
+            "y": 430
+          },
+          "signApproach": {
+            "x": 385,
+            "y": 465
+          }
+        },
+        {
+          "position": {
+            "x": 615,
+            "y": 345
+          },
+          "memory": {
+            "id": "railway-fall-foliage",
+            "scene": "railway",
+            "label": "Railway photoshoot",
+            "caption": "This photo shoot I remember was low key kinda awkward because it felt like everyone was watching us and I just couldn't be natural. Pooz cooked and there was a cute lil cat too!",
+            "alt": "A walk through the autumn colors.",
+            "originalAsset": "assets/memories/real-rail-3-original.webp",
+            "themedAsset": "assets/memories/real-rail-3-themed.webp"
+          },
+          "signPosition": {
+            "x": 615,
+            "y": 430
+          },
+          "signApproach": {
+            "x": 615,
+            "y": 465
+          }
+        },
+        {
+          "position": {
+            "x": 845,
+            "y": 345
+          },
+          "memory": {
+            "id": "railway-autumn-memory",
+            "scene": "railway",
+            "label": "Another fall foliage date!",
+            "caption": "I feel like this was one of your favorite dates/group of photos of us. I mainly loved how excited you were and the little treats we had too. Also the weather cooling down from the summer heat was nice.",
+            "alt": "More fall colors",
+            "originalAsset": "assets/memories/real-rail-4-original.webp",
+            "themedAsset": "assets/memories/real-rail-4-themed.webp"
+          },
+          "signPosition": {
+            "x": 845,
+            "y": 430
+          },
+          "signApproach": {
+            "x": 845,
+            "y": 465
+          },
+          "disembark": true
+        }
+      ],
+      "boardingMemory": {
+        "id": "railway-front-car",
+        "scene": "railway",
+        "label": "Time to embark!",
+        "caption": "I'm glad we got to sit together in the front car just us and feel like it was just me and you. It was also kinda fun having everyone else behind us wondering if they were talking about us haha",
+        "alt": "Together in the front car.",
+        "originalAsset": "assets/memories/real-rail-2-original.webp",
+        "themedAsset": "assets/memories/real-rail-2-themed.webp"
+      }
+    }
+  ],
+  "completionFlags": [
+    "railway-finished"
+  ],
+  "nextSceneId": "korea-smurf",
+  "checkpoint": {
+    "title": "Fall foliage railway park, remembered",
+    "text": "One of the best chapters of our early relationship.",
+    "button": "Continue our journey"
+  },
+  "backgroundAsset": "assets/world/korea-railway.webp"
+}

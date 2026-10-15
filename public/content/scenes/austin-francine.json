@@ -1,0 +1,303 @@
+{
+  "id": "austin-francine",
+  "title": "Francine and settling in",
+  "eyebrow": "AUSTIN",
+  "description": "Explore the marked moments. E interacts, and Q lets the other person lead.",
+  "theme": "austin",
+  "spawn": {
+    "leader": {
+      "x": 150,
+      "y": 430
+    },
+    "companion": {
+      "x": 110,
+      "y": 430
+    }
+  },
+  "obstacles": [],
+  "interactions": [
+    {
+      "id": "francine-car",
+      "label": "Francine",
+      "kind": "vehicle",
+      "visual": "car",
+      "position": {
+        "x": 150,
+        "y": 370
+      },
+      "approach": {
+        "x": 150,
+        "y": 412
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "francine-entered",
+      "title": "Francine",
+      "text": "WASD moves Francine; E visits the marked stops.",
+      "driverId": "person-a",
+      "requiredLeaderId": "person-a",
+      "requiredTravel": "walking",
+      "wrongLeaderText": "Hey, I got my license, but I'm passenger princess!",
+      "wrongLeaderSpeakerId": "person-b",
+      "memory": {
+        "id": "francine-purchased",
+        "scene": "francine",
+        "label": "Francine",
+        "caption": "Getting Francine checked out. What an amazing achievement making such a successful big purchase, I feel like this is something that we don't give ourselves enough credit for.",
+        "alt": "Picking up Francine, our Ioniq 5.",
+        "originalAsset": "assets/memories/real-francine-original.webp",
+        "themedAsset": "assets/memories/real-francine-themed.webp"
+      }
+    },
+    {
+      "id": "goodwin",
+      "label": "The Goodwin apartment building",
+      "kind": "memory",
+      "visual": "building",
+      "position": {
+        "x": 340,
+        "y": 230
+      },
+      "approach": {
+        "x": 340,
+        "y": 272
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "goodwin-visited",
+      "title": "Valentine's Day at Goodwin",
+      "text": "A visit to Goodwin.",
+      "memory": {
+        "id": "goodwin-valentines",
+        "scene": "francine",
+        "label": "Valentine's Day at Goodwin",
+        "caption": "Oh good old Goodwin... Looking forward to many more Valentine's Days with you my love",
+        "alt": "Valentine's Day at Goodwin.",
+        "originalAsset": "assets/memories/real-goodwin-original.webp",
+        "themedAsset": "assets/memories/real-goodwin-themed.webp"
+      }
+    },
+    {
+      "id": "citizenship",
+      "label": "The citizenship building",
+      "kind": "memory",
+      "visual": "building",
+      "position": {
+        "x": 600,
+        "y": 230
+      },
+      "approach": {
+        "x": 600,
+        "y": 272
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "citizenship-visited",
+      "title": "Gracie Citizenship!",
+      "text": "Celebrating citizenship together.",
+      "memory": {
+        "id": "citizenship-milestone",
+        "scene": "citizenship",
+        "label": "Gracie Citizenship!",
+        "caption": "Congrats on this hard work and huge milestone hehe I'm so proud of you and so many things that you've accomplished.",
+        "alt": "Celebrating citizenship together.",
+        "originalAsset": "assets/memories/real-citizenship-original.webp",
+        "themedAsset": "assets/memories/real-citizenship-themed.webp"
+      }
+    },
+    {
+      "id": "maa-exit",
+      "label": "Our apartment garage",
+      "kind": "vehicle-exit",
+      "visual": "garage",
+      "position": {
+        "x": 886,
+        "y": 380
+      },
+      "approach": {
+        "x": 886,
+        "y": 422
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "maa-arrived",
+      "title": "MAA garage",
+      "text": "Park Francine and careful coming back out :)",
+      "requiredTravel": "vehicle"
+    },
+    {
+      "id": "maa-access",
+      "label": "MAA and Snuromi cafe",
+      "kind": "access",
+      "visual": "door",
+      "position": {
+        "x": 810,
+        "y": 420
+      },
+      "approach": {
+        "x": 780,
+        "y": 430
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "maa-entered",
+      "title": "MAA and Snuromi cafe",
+      "text": "I got the fob!",
+      "requiredTravel": "walking",
+      "requiredLeaderId": "person-b",
+      "wrongLeaderText": "I got the fob!",
+      "wrongLeaderSpeakerId": "person-b",
+      "speakerId": "person-b",
+      "wrongTravelText": "We forgot to plug Francine in!",
+      "wrongTravelSpeakerId": "person-b",
+      "memory": {
+        "id": "snuromi-cafe-food",
+        "scene": "cafe",
+        "label": "Snuromi cafe",
+        "caption": "Kudos to y'all for putting this together! I was happy to meet your coworkers that I heard so much about, and I'm glad the stress was worth it in the end. I'd love to host more things like this in our home.",
+        "alt": "The lovingly prepared Snuromi table.",
+        "originalAsset": "assets/memories/real-snuromi-original.webp",
+        "themedAsset": "assets/memories/real-snuromi-themed.webp"
+      }
+    },
+    {
+      "id": "austin-photo-booth",
+      "label": "Photo booth",
+      "kind": "memory",
+      "visual": "photo-booth",
+      "position": {
+        "x": 175,
+        "y": 230
+      },
+      "approach": {
+        "x": 175,
+        "y": 272
+      },
+      "radius": 72,
+      "requires": [],
+      "setsFlag": "austin-photo-booth-seen",
+      "title": "Photo booth pic",
+      "text": "Our photo-booth picture.",
+      "memory": {
+        "id": "austin-photo-booth-memory",
+        "scene": "cafe",
+        "label": "Photo booth pic",
+        "caption": "Cute pics haha maybe we should start a business?",
+        "alt": "Our photo-booth picture.",
+        "originalAsset": "assets/memories/real-austin-1-original.webp"
+      }
+    },
+    {
+      "id": "austin-birthday-lake",
+      "label": "Nathaniel's birthday surprise!",
+      "kind": "memory",
+      "visual": "lake",
+      "position": {
+        "x": 180,
+        "y": 445
+      },
+      "approach": {
+        "x": 222,
+        "y": 445
+      },
+      "radius": 72,
+      "requires": [],
+      "setsFlag": "austin-birthday-lake-seen",
+      "title": "Nathaniel's birthday surprise!",
+      "text": "Lake fun for Nathaniel's birthday.",
+      "memory": {
+        "id": "austin-birthday-lake-memory",
+        "scene": "cafe",
+        "label": "Lake fun for Nathaniel's birthday",
+        "caption": "Thank you baby for planning so many birthday surprises for me. I can't wait to wake up with you by my side on my birthday. This would have been one of the best days ever if not for Amrit :(",
+        "alt": "Pool time for Nathaniel's birthday.",
+        "originalAsset": "assets/memories/real-austin-2-original.webp",
+        "themedAsset": "assets/memories/real-austin-2-themed.webp"
+      }
+    },
+    {
+      "id": "austin-pj-house",
+      "label": "A dreamy company — PJ",
+      "kind": "memory",
+      "visual": "house",
+      "position": {
+        "x": 455,
+        "y": 445
+      },
+      "approach": {
+        "x": 497,
+        "y": 445
+      },
+      "radius": 72,
+      "requires": [],
+      "setsFlag": "austin-pj-house-seen",
+      "title": "PJ Time",
+      "text": "Some dreamy company with PJ.",
+      "memory": {
+        "id": "austin-pj-house-memory",
+        "scene": "cafe",
+        "label": "PJ Time",
+        "caption": "I'm glad you had your good moments with PJ y'all are so cute together hahaha",
+        "alt": "A dreamy moment with PJ.",
+        "originalAsset": "assets/memories/real-austin-3-original.webp",
+        "themedAsset": "assets/memories/real-austin-3-themed.webp"
+      }
+    },
+    {
+      "id": "austin-line-dancing",
+      "label": "Together in Austin — Gracie's birthday",
+      "kind": "memory",
+      "visual": "line-dance",
+      "position": {
+        "x": 835,
+        "y": 180
+      },
+      "approach": {
+        "x": 835,
+        "y": 222
+      },
+      "radius": 72,
+      "requires": [],
+      "setsFlag": "austin-line-dancing-seen",
+      "title": "Gracie's birthday",
+      "text": "Line dancing for Gracie's birthday in Austin.",
+      "memory": {
+        "id": "austin-line-dancing-memory",
+        "scene": "cafe",
+        "label": "Gracie's birthday",
+        "caption": "I love how you were beaming all night! I'm glad we got to put the night together I hope that the dance vid was funny enough still haha",
+        "alt": "Line dancing for Gracie's birthday in Austin.",
+        "originalAsset": "assets/memories/real-austin-4-original.webp",
+        "themedAsset": "assets/memories/real-austin-4-themed.webp"
+      }
+    }
+  ],
+  "completionFlags": [
+    "francine-entered",
+    "goodwin-visited",
+    "citizenship-visited",
+    "maa-entered",
+    "austin-photo-booth-seen",
+    "austin-birthday-lake-seen",
+    "austin-pj-house-seen",
+    "austin-line-dancing-seen"
+  ],
+  "nextSceneId": "madeira",
+  "checkpoint": {
+    "title": "Francine and Austin, remembered",
+    "text": "Of course we couldn't stay in Austin, we have more adventures cooked up (while in MAA!)",
+    "button": "Continue our journey"
+  },
+  "vehicle": {
+    "id": "francine",
+    "position": {
+      "x": 150,
+      "y": 370
+    },
+    "exit": {
+      "x": 864,
+      "y": 440
+    }
+  },
+  "backgroundAsset": "assets/world/austin-francine.webp"
+}

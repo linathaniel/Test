@@ -1,0 +1,92 @@
+{
+  "id": "korea-smurf",
+  "title": "SMURF escape room",
+  "eyebrow": "KOREA",
+  "description": "Walk close to a floor letter and press E, or click a letter to change its light.",
+  "theme": "smurf",
+  "spawn": {
+    "leader": {
+      "x": 190,
+      "y": 430
+    },
+    "companion": {
+      "x": 150,
+      "y": 430
+    }
+  },
+  "obstacles": [],
+  "interactions": [
+    {
+      "id": "smurf-floor",
+      "label": "The letter dance floor",
+      "kind": "puzzle",
+      "visual": "puzzle",
+      "position": {
+        "x": 480,
+        "y": 300
+      },
+      "approach": {
+        "x": 480,
+        "y": 420
+      },
+      "radius": 120,
+      "requires": [],
+      "setsFlag": "smurf-solved",
+      "title": "The letter dance floor",
+      "text": "The letter floor is waiting for you.",
+      "letters": [
+        "K",
+        "S",
+        "B",
+        "N",
+        "V",
+        "D",
+        "H",
+        "U",
+        "A",
+        "O",
+        "X",
+        "M",
+        "J",
+        "T",
+        "C",
+        "E",
+        "P",
+        "W",
+        "F",
+        "L",
+        "Y",
+        "G",
+        "Q",
+        "I",
+        "R"
+      ],
+      "solution": [
+        "S",
+        "M",
+        "U",
+        "R",
+        "F"
+      ],
+      "memory": {
+        "id": "smurf-date",
+        "scene": "smurf",
+        "label": "Our escape room date",
+        "caption": "Our Smurf-themed escape room adventure.",
+        "alt": "Our Smurf-themed escape room adventure.",
+        "originalAsset": "assets/memories/real-smurf-original.webp",
+        "themedAsset": "assets/memories/real-smurf-themed.webp"
+      }
+    }
+  ],
+  "completionFlags": [
+    "smurf-solved"
+  ],
+  "nextSceneId": "korea-petite-france",
+  "checkpoint": {
+    "title": "Smurf escape room, remembered",
+    "text": "Congrats on the solve hahaha, let's go to kpop stay next ;)",
+    "button": "Continue our journey"
+  },
+  "backgroundAsset": "assets/world/korea-smurf.webp"
+}

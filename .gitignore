@@ -1,0 +1,11 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+original_images/
+art-work/
+.npm-cache/
+.env
+.env.*
+!.env.example
+*.log

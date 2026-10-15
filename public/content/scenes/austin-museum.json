@@ -1,0 +1,123 @@
+{
+  "id": "austin-museum",
+  "title": "Museum of Ice Cream",
+  "eyebrow": "AUSTIN",
+  "description": "Explore the marked moments. E interacts, and Q lets the other person lead.",
+  "theme": "museum",
+  "spawn": {
+    "leader": {
+      "x": 190,
+      "y": 430
+    },
+    "companion": {
+      "x": 150,
+      "y": 430
+    }
+  },
+  "obstacles": [],
+  "interactions": [
+    {
+      "id": "museum-pink",
+      "label": "The pink room",
+      "kind": "memory",
+      "visual": "museum-jukebox",
+      "position": {
+        "x": 270,
+        "y": 255
+      },
+      "approach": {
+        "x": 270,
+        "y": 297
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "museum-pink-seen",
+      "title": "Ice Cream!",
+      "text": "A dreamy time in the pink room.",
+      "memory": {
+        "id": "museum-pink-room",
+        "scene": "museum",
+        "label": "Ice Cream!",
+        "caption": "Look at you... I fully want you to eat me up like that ice cream.",
+        "alt": "Together in the pink world of the Museum of Ice Cream.",
+        "originalAsset": "assets/memories/real-museum-1-original.webp",
+        "themedAsset": "assets/memories/real-museum-1-themed.webp"
+      }
+    },
+    {
+      "id": "museum-more-pink",
+      "label": "More pink",
+      "kind": "memory",
+      "visual": "museum-arches",
+      "position": {
+        "x": 510,
+        "y": 200
+      },
+      "approach": {
+        "x": 510,
+        "y": 242
+      },
+      "radius": 72,
+      "requires": [
+        "museum-pink-seen"
+      ],
+      "setsFlag": "museum-more-pink-seen",
+      "title": "Another pink pic",
+      "text": "Another playful moment at the museum.",
+      "memory": {
+        "id": "museum-more-pink-memory",
+        "scene": "museum",
+        "label": "Another pink pic",
+        "caption": "I'm not gonna lie you look so dang good during this date (and the Museum of Illusion date) I think it's the red top...",
+        "alt": "Another playful moment at the museum.",
+        "originalAsset": "assets/memories/real-museum-3-original.webp",
+        "themedAsset": "assets/memories/real-museum-3-themed.webp"
+      }
+    },
+    {
+      "id": "museum-sprinkles",
+      "label": "The pink corridor",
+      "kind": "memory",
+      "visual": "museum-mirror",
+      "position": {
+        "x": 710,
+        "y": 380
+      },
+      "approach": {
+        "x": 710,
+        "y": 422
+      },
+      "radius": 80,
+      "requires": [
+        "museum-more-pink-seen"
+      ],
+      "setsFlag": "museum-sprinkles-seen",
+      "title": "Silly mirror pic",
+      "text": "One more pink museum memory.",
+      "memory": {
+        "id": "museum-sprinkle-pool",
+        "scene": "museum",
+        "label": "Silly mirror pic",
+        "caption": "You kept trying to make your boobs look funny hahahaa",
+        "alt": "A picture in the pink corridor.",
+        "originalAsset": "assets/memories/real-museum-2-original.webp",
+        "themedAsset": "assets/memories/real-museum-2-themed.webp"
+      },
+      "requiredLeaderId": "person-b",
+      "wrongLeaderText": "I want to take a silly mirror pic",
+      "wrongLeaderSpeakerId": "person-b"
+    }
+  ],
+  "completionFlags": [
+    "museum-pink-seen",
+    "museum-more-pink-seen",
+    "museum-sprinkles-seen"
+  ],
+  "nextSceneId": "norway-scrapbook",
+  "checkpoint": {
+    "title": "Museum of Ice Cream, remembered",
+    "text": "We some time in Austin with your grad, and a couple dates, but we also did some traveling...",
+    "button": "Continue our journey"
+  },
+  "backgroundAsset": "assets/world/austin-museum.webp"
+}

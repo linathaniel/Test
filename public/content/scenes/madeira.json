@@ -1,0 +1,168 @@
+{
+  "id": "madeira",
+  "title": "Madeira",
+  "eyebrow": "MADEIRA",
+  "description": "Explore the marked moments. E interacts, and Q lets the other person lead.",
+  "theme": "madeira",
+  "spawn": {
+    "leader": {
+      "x": 265,
+      "y": 410
+    },
+    "companion": {
+      "x": 225,
+      "y": 410
+    }
+  },
+  "obstacles": [
+    { "x": 0, "y": 0, "width": 95, "height": 540 },
+    { "x": 905, "y": 0, "width": 55, "height": 540 },
+    { "x": 95, "y": 0, "width": 810, "height": 140 },
+    { "x": 95, "y": 430, "width": 705, "height": 110 },
+    { "x": 800, "y": 465, "width": 105, "height": 75 },
+    { "x": 205, "y": 185, "width": 235, "height": 190 },
+    { "x": 520, "y": 185, "width": 230, "height": 190 }
+  ],
+  "interactions": [
+    {
+      "id": "madeira-coast",
+      "label": "A meal in Madeira",
+      "kind": "memory",
+      "visual": "table",
+      "position": {
+        "x": 120,
+        "y": 360
+      },
+      "approach": {
+        "x": 155,
+        "y": 395
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "madeira-coast-seen",
+      "title": "Madeira Meal",
+      "text": "A meal, together on the island.",
+      "memory": {
+        "id": "madeira-coast-memory",
+        "scene": "madeira",
+        "label": "Madeira Meal",
+        "caption": "A random restaurant with a fellow American, a dog, and Seixal beach.",
+        "alt": "Together at a table in Madeira.",
+        "originalAsset": "assets/memories/portugal-meal-1-original.webp",
+        "themedAsset": "assets/memories/portugal-meal-1-themed.webp"
+      }
+    },
+    {
+      "id": "madeira-garden",
+      "label": "Lisbon meal",
+      "kind": "memory",
+      "visual": "table",
+      "position": {
+        "x": 835,
+        "y": 310
+      },
+      "approach": {
+        "x": 800,
+        "y": 350
+      },
+      "radius": 80,
+      "requires": [],
+      "setsFlag": "madeira-garden-seen",
+      "title": "Lisbon Lunch",
+      "text": "A meal together in Lisbon.",
+      "memory": {
+        "id": "madeira-lookout-memory",
+        "scene": "madeira",
+        "label": "Lisbon Lunch",
+        "caption": "We needed this and the rest we got after SO BAD I remember. We had a cute place in Lisbon and I actually really liked it. Also I'm pretty sure this was just a really late brunch lol",
+        "alt": "A meal together in Lisbon.",
+        "originalAsset": "assets/memories/portugal-meal-2-original.webp",
+        "themedAsset": "assets/memories/portugal-meal-2-themed.webp"
+      }
+    },
+    {
+      "id": "madeira-view",
+      "label": "The island view",
+      "kind": "memory",
+      "visual": "castle",
+      "position": {
+        "x": 480,
+        "y": 160
+      },
+      "approach": {
+        "x": 480,
+        "y": 195
+      },
+      "radius": 72,
+      "requires": [],
+      "setsFlag": "madeira-view-seen",
+      "title": "Castle View",
+      "text": "A picture with a view.",
+      "memory": {
+        "id": "madeira-view-memory",
+        "scene": "madeira",
+        "label": "Castle View",
+        "caption": "Sorry you weren't feeling great here, but I can't wait to kiss you with this view again :)",
+        "alt": "A kiss with an island view.",
+        "originalAsset": "assets/memories/portugal-view-original.webp",
+        "themedAsset": "assets/memories/portugal-view-themed.webp"
+      }
+    },
+    {
+      "id": "cristo-rei",
+      "label": "Cristo Rei",
+      "kind": "ending",
+      "eRevealsFinalPhoto": true,
+      "visual": "proposal",
+      "position": {
+        "x": 835,
+        "y": 445
+      },
+      "approach": {
+        "x": 785,
+        "y": 420
+      },
+      "radius": 80,
+      "requires": [
+        "madeira-coast-seen",
+        "madeira-garden-seen",
+        "madeira-view-seen"
+      ],
+      "setsFlag": "proposal-read",
+      "title": "Cristo Rei",
+      "text": "Our Madeira moment.",
+      "memory": {
+        "id": "madeira-proposal",
+        "scene": "madeira",
+        "label": "The big moment... jk",
+        "caption": "the big moment... jk",
+        "alt": "A funny moment before the proposal.",
+        "originalAsset": "assets/memories/portugal-before-proposal-original.webp",
+        "themedAsset": "assets/memories/portugal-before-proposal-themed.webp",
+        "additionalPhotos": [
+          {
+            "label": "Our Madeira moment",
+            "caption": "Our Madeira moment",
+            "alt": "Our Madeira moment",
+            "originalAsset": "assets/memories/portugal-proposal-original.webp",
+            "themedAsset": "assets/memories/portugal-proposal-themed.webp"
+          }
+        ]
+      },
+      "letter": "Hey baby, Happy 3rd Anniversary! How was reliving the journey we had from Korea to France to the US to Norway, and finally to Portugal. With each destination we got to celebrate our love. I am so happy that I get to travel the world with you by my side. I can't wait for our 4th anniversary (and technically 0th) and the honeymoon that is sure to follow. I love you so so so so so so much <3"
+    }
+  ],
+  "completionFlags": [
+    "madeira-coast-seen",
+    "madeira-garden-seen",
+    "madeira-view-seen",
+    "proposal-read"
+  ],
+  "nextSceneId": null,
+  "checkpoint": {
+    "title": "Our little world of GN adventures",
+    "text": "Everything is accessible in the top right, also you can use Previous chapter / Next chapter below to revisit our journey.",
+    "button": "Keep exploring!"
+  },
+  "backgroundAsset": "assets/world/madeira.webp"
+}
