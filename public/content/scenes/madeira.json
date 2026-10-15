@@ -7,21 +7,48 @@
   "spawn": {
     "leader": {
       "x": 265,
-      "y": 375
+      "y": 360
     },
     "companion": {
       "x": 225,
-      "y": 375
+      "y": 360
     }
   },
   "obstacles": [
-    { "x": 0, "y": 0, "width": 110, "height": 540 },
-    { "x": 885, "y": 0, "width": 75, "height": 540 },
-    { "x": 110, "y": 0, "width": 775, "height": 140 },
-    { "x": 110, "y": 395, "width": 685, "height": 145 },
-    { "x": 795, "y": 440, "width": 90, "height": 100 },
-    { "x": 180, "y": 180, "width": 265, "height": 170 },
-    { "x": 510, "y": 180, "width": 270, "height": 170 }
+    { "x": 0, "y": 0, "width": 960, "height": 130 },
+    { "x": 0, "y": 130, "width": 125, "height": 40 },
+    { "x": 810, "y": 130, "width": 150, "height": 40 },
+    { "x": 0, "y": 170, "width": 120, "height": 30 },
+    { "x": 185, "y": 170, "width": 270, "height": 30 },
+    { "x": 515, "y": 170, "width": 240, "height": 30 },
+    { "x": 820, "y": 170, "width": 140, "height": 30 },
+    { "x": 0, "y": 200, "width": 130, "height": 30 },
+    { "x": 195, "y": 200, "width": 260, "height": 30 },
+    { "x": 515, "y": 200, "width": 240, "height": 30 },
+    { "x": 820, "y": 200, "width": 140, "height": 30 },
+    { "x": 0, "y": 230, "width": 145, "height": 30 },
+    { "x": 210, "y": 230, "width": 245, "height": 30 },
+    { "x": 515, "y": 230, "width": 245, "height": 30 },
+    { "x": 835, "y": 230, "width": 125, "height": 30 },
+    { "x": 0, "y": 260, "width": 160, "height": 30 },
+    { "x": 225, "y": 260, "width": 230, "height": 30 },
+    { "x": 515, "y": 260, "width": 250, "height": 30 },
+    { "x": 875, "y": 260, "width": 85, "height": 30 },
+    { "x": 0, "y": 290, "width": 135, "height": 30 },
+    { "x": 240, "y": 290, "width": 215, "height": 30 },
+    { "x": 515, "y": 290, "width": 260, "height": 30 },
+    { "x": 870, "y": 290, "width": 90, "height": 30 },
+    { "x": 0, "y": 320, "width": 135, "height": 25 },
+    { "x": 255, "y": 320, "width": 200, "height": 25 },
+    { "x": 515, "y": 320, "width": 270, "height": 25 },
+    { "x": 875, "y": 320, "width": 85, "height": 25 },
+    { "x": 0, "y": 345, "width": 150, "height": 10 },
+    { "x": 865, "y": 345, "width": 95, "height": 10 },
+    { "x": 0, "y": 355, "width": 205, "height": 25 },
+    { "x": 865, "y": 355, "width": 95, "height": 25 },
+    { "x": 0, "y": 380, "width": 795, "height": 55 },
+    { "x": 875, "y": 380, "width": 85, "height": 55 },
+    { "x": 0, "y": 435, "width": 960, "height": 105 }
   ],
   "interactions": [
     {
@@ -30,12 +57,12 @@
       "kind": "memory",
       "visual": "table",
       "position": {
-        "x": 140,
+        "x": 165,
         "y": 345
       },
       "approach": {
-        "x": 145,
-        "y": 370
+        "x": 200,
+        "y": 350
       },
       "radius": 80,
       "requires": [],
@@ -62,8 +89,8 @@
         "y": 285
       },
       "approach": {
-        "x": 815,
-        "y": 315
+        "x": 810,
+        "y": 305
       },
       "radius": 80,
       "requires": [],
@@ -86,11 +113,11 @@
       "kind": "memory",
       "visual": "castle",
       "position": {
-        "x": 480,
-        "y": 155
+        "x": 495,
+        "y": 150
       },
       "approach": {
-        "x": 480,
+        "x": 485,
         "y": 180
       },
       "radius": 72,
@@ -120,7 +147,7 @@
       },
       "approach": {
         "x": 815,
-        "y": 395
+        "y": 390
       },
       "radius": 80,
       "requires": [

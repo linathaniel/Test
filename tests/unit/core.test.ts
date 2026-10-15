@@ -55,7 +55,7 @@ describe('story contracts', () => {
   });
   it('rejects a blocked interaction ray even when the approach can be reached', () => {
     const broken = structuredClone(story);
-    broken.scenes.find((scene) => scene.id === 'madeira')!.obstacles.push({ x: 470, y: 160, width: 20, height: 5 });
+    broken.scenes.find((scene) => scene.id === 'madeira')!.obstacles.push({ x: 480, y: 160, width: 25, height: 5 });
     expect(() => validateStory(broken)).toThrow('blocked approach line');
   });
 });
@@ -121,7 +121,7 @@ describe('movement and interaction geometry', () => {
     }
     for (const interaction of island.interactions) expect(isNearby(interaction, interaction.approach, island.obstacles)).toBe(true);
     for (const point of [{ x: 80, y: 310 }, { x: 300, y: 310 }, { x: 650, y: 310 }, { x: 925, y: 310 }]) expect(isSafe(point, island.obstacles)).toBe(false);
-    expect(clearLine({ x: 155, y: 310 }, { x: 480, y: 310 }, island.obstacles)).toBe(false);
+    expect(clearLine({ x: 210, y: 310 }, { x: 485, y: 310 }, island.obstacles)).toBe(false);
   });
   it('normalizes diagonals, and opposing keys cancel', () => {
     expect(Math.hypot(...Object.values(direction(new Set(['KeyW', 'KeyD']))))).toBeCloseTo(1);

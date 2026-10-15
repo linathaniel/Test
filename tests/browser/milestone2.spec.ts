@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { expect, test, type Page } from '@playwright/test';
 import type { Point, PuzzleInteraction, RailwayInteraction, SceneDefinition } from '../../src/content/model';
+import { clearLine, isSafe } from '../../src/world/geometry';
 
 const manifest = JSON.parse(readFileSync('public/content/game.json', 'utf8'));
 const scenes: SceneDefinition[] = manifest.sceneFiles.map((file: string) => JSON.parse(readFileSync('public/' + file, 'utf8')));
@@ -8,7 +9,7 @@ const railway = scenes.find((scene) => scene.id === 'korea-railway')!.interactio
 const garage = scenes.find((scene) => scene.id === 'austin-francine')!.interactions.find((interaction) => interaction.kind === 'vehicle-exit')!;
 const madeira = scenes.find((scene) => scene.id === 'madeira')!;
 const finale = madeira.interactions.find((interaction) => interaction.kind === 'ending')!;
-const madeiraPath = { left: 145, center: 480, right: 815, top: 165, bottom: 375 };
+const madeiraPath = { leftTop: 150, leftBottom: 265, center: 485, rightTop: 790, top: 155, bottom: 360 };
 type Debug = {
   mode: string; sceneId: string; leaderId: string; target: string | null; flags: string[]; completed: string[];
   leader: { x: number; y: number }; follower: { x: number; y: number };
@@ -76,42 +77,40 @@ async function remainingMemories(page: Page, sceneId: string) {
   }
   await expect.poll(async () => (await state(page)).mode).toBe('checkpoint');
 }
-// Follow the authored loop and center path instead of asking the test driver to cut through a garden bed.
+// Follow the authored curved road and its shoulders, with room for real keyboard stopping, rather than cutting through the gardens.
 function madeiraRoute(start: Point, destination: Point): Point[] {
-  const { left, center, right, top, bottom } = madeiraPath;
-  // Enter/leave the statue's wider forecourt vertically before returning to the lower loop.
-  const entry = start.y > 395 ? { x: start.x, y: bottom } : start;
-  const exit = destination.y > 395 ? { x: destination.x, y: bottom } : destination;
-  const corners = [{ x: left, y: top }, { x: center, y: top }, { x: right, y: top },
-    { x: left, y: bottom }, { x: center, y: bottom }, { x: right, y: bottom }];
-  const lanes = [[0, 1], [1, 2], [0, 3], [1, 4], [2, 5], [3, 4], [4, 5]];
-  const project = (point: Point) => lanes.map(([a, b]) => ({
-    x: Math.max(Math.min(corners[a].x, corners[b].x), Math.min(Math.max(corners[a].x, corners[b].x), point.x)),
-    y: Math.max(Math.min(corners[a].y, corners[b].y), Math.min(Math.max(corners[a].y, corners[b].y), point.y)),
-  })).sort((a, b) => Math.hypot(a.x - point.x, a.y - point.y) - Math.hypot(b.x - point.x, b.y - point.y))[0];
-  const nodes = [...corners, project(entry), project(exit)];
-  const distance = nodes.map(() => Infinity); distance[6] = 0;
-  const previous = nodes.map(() => -1); const visited = new Set<number>();
-  for (let step = 0; step < nodes.length; step++) {
-    const index = distance.reduce((best, value, i) => !visited.has(i) && (best < 0 || value < distance[best]) ? i : best, -1);
-    if (index < 0 || !Number.isFinite(distance[index])) throw new Error('No path along the Madeira loop');
-    if (index === 7) break;
-    visited.add(index);
-    nodes.forEach((node, i) => {
-      const from = nodes[index];
-      const connected = from.y === node.y && [top, bottom].includes(node.y)
-        || from.x === node.x && [left, center, right].includes(node.x);
-      if (!connected) return;
-      const candidate = distance[index] + Math.hypot(from.x - node.x, from.y - node.y);
-      if (candidate < distance[i]) { distance[i] = candidate; previous[i] = index; }
-    });
+  const key = (point: Point) => `${point.x},${point.y}`;
+  const walkable = (point: Point) => [[0, 0], [-4, 0], [4, 0], [0, -4], [0, 4]]
+    .every(([dx, dy]) => isSafe({ x: point.x + dx, y: point.y + dy }, madeira.obstacles));
+  const anchor = (point: Point) => {
+    const candidates = [-10, -5, 0, 5, 10].flatMap((dx) => [-10, -5, 0, 5, 10]
+      .map((dy) => ({ x: Math.round(point.x / 5) * 5 + dx, y: Math.round(point.y / 5) * 5 + dy })))
+      .filter((candidate) => {
+        // A real foot can rest exactly against a wall; leave that shared edge into the clear road.
+        const departure = { x: point.x + (candidate.x - point.x) * .001, y: point.y + (candidate.y - point.y) * .001 };
+        return walkable(candidate) && isSafe(departure, madeira.obstacles) && clearLine(departure, candidate, madeira.obstacles);
+      });
+    const nearest = candidates.sort((a, b) => Math.hypot(a.x - point.x, a.y - point.y) - Math.hypot(b.x - point.x, b.y - point.y))[0];
+    if (!nearest) throw new Error('No safe Madeira road anchor');
+    return nearest;
+  };
+  const first = anchor(start); const last = anchor(destination);
+  const queue = [first]; const previous = new Map<string, Point | null>([[key(first), null]]);
+  for (let index = 0; index < queue.length && !previous.has(key(last)); index++) {
+    const current = queue[index];
+    for (const [dx, dy] of [[-5, 0], [5, 0], [0, -5], [0, 5]]) {
+      const next = { x: current.x + dx, y: current.y + dy };
+      if (!previous.has(key(next)) && walkable(next) && clearLine(current, next, madeira.obstacles)) {
+        previous.set(key(next), current); queue.push(next);
+      }
+    }
   }
-  const route: Point[] = [];
-  for (let index = 7; index !== 6; index = previous[index]) {
-    if (index < 0) throw new Error('Incomplete Madeira route');
-    route.unshift(nodes[index]);
-  }
-  return [...(entry === start ? [] : [entry]), nodes[6], ...route, exit, ...(exit === destination ? [] : [destination])];
+  if (!previous.has(key(last))) throw new Error('No path along the Madeira road');
+  const steps: Point[] = [];
+  for (let point: Point | null = last; point; point = previous.get(key(point))!) steps.unshift(point);
+  const turns = steps.filter((point, index) => index === 0 || index === steps.length - 1
+    || steps[index - 1].x !== steps[index + 1].x && steps[index - 1].y !== steps[index + 1].y);
+  return [...turns, destination];
 }
 async function moveTo(page: Page, x: number, y: number, actor: 'leader' | 'vehicle' = 'leader') {
   const before = await state(page);
@@ -1017,25 +1016,26 @@ test('Madeira paths block sea and inland shortcuts while all three photo stops w
   };
   // The bottom garden bed prevents a direct shortcut toward the castle.
   const inland = await push('w');
-  expect(inland.y).toBeGreaterThanOrEqual(358);
-  expect(inland.y).toBeLessThan(375);
-  await moveTo(page, madeiraPath.left, madeiraPath.bottom);
-  expect((await push('a')).x).toBeGreaterThan(118);
+  expect(inland.y).toBeGreaterThanOrEqual(353);
+  expect(inland.y).toBeLessThan(360);
+  await moveTo(page, 150, 195);
+  expect((await push('a')).x).toBeGreaterThan(128);
   await moveTo(page, madeiraPath.center, madeiraPath.bottom);
-  expect((await push('s')).y).toBeLessThan(398);
-  await moveTo(page, madeiraPath.right, madeiraPath.bottom);
-  expect((await push('d')).x).toBeLessThan(876);
+  expect((await push('s')).y).toBeLessThan(383);
+  await moveTo(page, 810, 305);
+  expect((await push('d')).x).toBeLessThan(862);
   await moveTo(page, madeiraPath.center, madeiraPath.top);
-  expect((await push('w')).y).toBeGreaterThan(148);
+  expect((await push('w')).y).toBeGreaterThan(138);
   await moveTo(page, 835, 420);
   expect((await state(page)).leader.y).toBeGreaterThan(413);
-  expect((await push('s')).y).toBeLessThan(443);
+  expect((await push('s')).y).toBeLessThan(438);
   // Walk the left loop, then switch on it; the follower must stay on the same path.
-  await moveTo(page, madeiraPath.left, madeiraPath.top); await moveTo(page, madeiraPath.left, madeiraPath.bottom); await checkFeet();
+  await moveTo(page, madeiraPath.leftTop, madeiraPath.top); await moveTo(page, 150, 195);
+  await moveTo(page, 190, 275); await moveTo(page, madeiraPath.leftBottom, madeiraPath.bottom); await checkFeet();
   const originalLeader = (await state(page)).leaderId;
   await page.keyboard.press('q');
   await expect.poll(async () => (await state(page)).leaderId).not.toBe(originalLeader);
-  await moveTo(page, madeiraPath.left, madeiraPath.top); await moveTo(page, madeiraPath.right, madeiraPath.top); await checkFeet();
+  await moveTo(page, madeiraPath.leftTop, madeiraPath.top); await moveTo(page, madeiraPath.rightTop, madeiraPath.top); await checkFeet();
   const denyProposal = async () => {
     await moveTo(page, finale.approach.x, finale.approach.y);
     await clickObject(page, finale.position.x, finale.position.y);

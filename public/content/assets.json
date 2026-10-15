@@ -655,7 +655,7 @@
       "path": "assets/world/madeira.webp",
       "width": 1672,
       "height": 941,
-      "bytes": 112428,
+      "bytes": 331060,
       "kind": "environment",
       "provenance": "Built-in ImageGen; optimized for this game"
     },
@@ -668,5 +668,5 @@
       "provenance": "Built-in ImageGen; optimized for this game"
     }
   ],
-  "totalBytes": 17783600
+  "totalBytes": 18002232
 }
